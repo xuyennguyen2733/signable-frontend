@@ -1,0 +1,259 @@
+* {
+  margin: 0px;
+  font-family: "Poppins";
+}
+
+.radialBar {
+  padding-top: 10px;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-family: "Poppins";
+  gap: 1rem;
+  color: black !important;
+}
+
+.CircularProgressbar {
+  width: 4rem !important;
+  overflow: visible;
+}
+
+.CircularProgressbar-path {
+  stroke: #ebab34 !important;
+  stroke-width: 12px !important;
+  filter: drop-shadow(2px 4px 6px white);
+}
+
+.CircularProgressbar-trail {
+  stroke-width: 12px;
+}
+
+.CircularProgressbar-text {
+  color: #3C3852 !important;
+}
+
+.detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.unit-name {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* Begin Expanded Card */
+.body-blur {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 999;
+}
+
+.lesson-access-container {
+  padding-top: 2rem;
+  max-height: 400px; /* Set a fixed height for the container */
+  overflow-y: auto; /* Allow vertical scrolling */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+/* .lesson-access {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  color: white;
+  background-color: #ff6ac1;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 106, 193, 0.4);
+  border: 2px solid red;
+} */
+
+.lesson-access:hover {
+  background-color: #ff97d4;
+}
+
+.lesson-title,
+.lesson-details {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lesson-title {
+  margin-bottom: 5px;
+}
+
+.lesson-details {
+  font-size: 12px;
+  color: #777;
+}
+
+.detail > span:nth-child(2) {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.detail > span:nth-child(3) {
+  font-size: 12px;
+}
+
+.ExpandedCard {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  z-index: 9999;
+  margin: auto;
+}
+
+.ExpandedCard > span:nth-of-type(1) {
+  color: --black;
+  font-size: 26px;
+  font-weight: bold;
+  text-shadow: 0px 0px 15px white;
+}
+
+.ExpandedCard > span:nth-of-type(2) {
+  color: rgb(236, 236, 236);
+  font-size: 15px;
+  padding-bottom: 20rem;
+}
+
+/* End Expanded Card */
+
+.chartContainer {
+  width: 70%;
+}
+
+@media screen and (max-width: 1280px) {
+  .ExpandedCard {
+    /* top: 2rem; */
+    height: 45vh;
+    /* left: 6rem; */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ExpandedCard {
+    top: 8rem;
+    height: 70vh;
+    left: 25px;
+    width: 80%;
+  }
+}
+
+.card-title {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: rgb(241, 241, 241);
+  z-index: 2;
+  word-wrap: break-word;
+}
+
+.card-content {
+  font-size: 0.9em;
+  color: black;
+  z-index: 2;
+}
+
+.cookieHeading {
+  --primary-color: #7257fa;
+  --secondary-color: #3c3852;
+  color: #3c3852;
+  font-family: "Poppins";
+  padding: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.cookieDescription {
+  font-family: "Poppins";
+  color: #3c3852;
+  font-size: 0.9em;
+  z-index: 2;
+}
+
+.cookieDescription a {
+  color: rgb(241, 241, 241);
+}
+
+.card__arrow {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 30px;
+  display: flex;
+  height: 30px;
+  background-color: #3c3852;
+  border-top-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.card__arrow svg {
+  align-items: center;
+  transform: rotate(270deg);
+}
+
+.detail > span:nth-child(2) {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.detail > span:nth-child(3) {
+  font-size: 12px;
+}
+.unit-btn {
+  color: purple;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid purple;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.unit-btn:hover {
+  color: white;
+}
+
+.unit-btn::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: purple;
+  z-index: -1;
+  transition: all 1s;
+}
+
+.unit-btn:hover::before {
+  width: 160%;
+}

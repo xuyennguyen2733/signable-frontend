@@ -1,0 +1,721 @@
+.lesson-page {
+  /* height: 100vh; */
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+.lesson-body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.close-lesson-button {
+  border: 1px solid #333;
+  outline: none;
+  border-radius: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 42px;
+  color: #333;
+  font-weight: 700;
+}
+
+/* Begin Expanded Card */
+.body-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 999;
+}
+
+.close-lesson-button:hover {
+  letter-spacing: 1px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+/* ---------- VIDEO AND CANVAS ---------- */
+
+.webcam {
+  z-index: 8;
+}
+
+.canvas {
+  transform: scaleX(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  position: absolute;
+  z-index: 9;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.video-controller {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+
+.material-icons-outlined {
+  vertical-align: middle;
+  line-height: 1px;
+}
+
+
+/* $btn-color--primary: rgba(41, 118, 223, 1);
+$btn-shadow: rgba(41, 118, 223, .5);
+$btn-shine: linear-gradient(to top, rgba(255,255,255,0) 0%, rgba(250,198,100,.27) 100%); 
+$btn-color--success: rgba(0,208,0,1);
+$btn-shadow--success: rgba(0,208,0,.5);
+
+@mixin btn-shadow($color) {
+    box-shadow: 0 15px 40px 0 $color;
+} */
+
+/* Helpers 
+====================== */
+.u-imgResponsive {
+  max-width: 100%;
+}
+
+.u-btn {
+  flex: 0 0 100%;
+  padding: 14px 20px;
+  border: 0;
+  background: black, black;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  transition: all .2s ease;
+  /* @include btn-shadow($btn-shadow);
+    
+    &:hover {
+        opacity: 0.9;
+    }
+    &.u-btn--success {
+        background: $btn-color--success;
+        @include btn-shadow($btn-shadow--success);
+    } */
+}
+
+/* Global 
+====================== */
+html {
+  box-sizing: border-box;
+  height: 100%;
+
+}
+
+body {
+  font-family: "Proxima Nova Soft Semibold", "Proxima Nova", 'Helvetica Neue', Helvetica, Arial;
+}
+
+body,
+.wrapper {
+  min-height: 100vh;
+}
+
+/* Congrats
+====================== */
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-color: transparent ;
+}
+
+.modal {
+  width: 100%;
+  max-width: 530px;
+  margin: 20px;
+  overflow: auto;
+  box-shadow: 0 60px 80px 0 rgba(0, 0, 0, .4);
+  border-radius: 30px;
+}
+
+.modal-top {
+  padding: 30px 30px 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: rgba(251, 251, 251, 1);
+}
+
+.modal-icon {
+  padding-top: 3rem;
+  display: block;
+  max-width: 207px;
+  margin: 0 auto 65px;
+  font-size: xx-large;
+
+}
+
+.modal-header {
+  margin-bottom: 5px;
+  font-size: 25.5px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.modal-subheader {
+  max-width: 350px;
+  margin: 0 auto;
+  margin-bottom: 3vh;
+  font-size: 19px;
+  line-height: 1.3;
+  letter-spacing: 1.25px;
+  text-align: center;
+  color: #999;
+}
+
+.congrats-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 55px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #fff !important;
+}
+
+.congrats-btn {
+  margin: 10px auto;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.congrats-btn:hover {
+  background-color: #218838;
+  /* A slightly darker green on hover for effect */
+}
+
+.congrats-stats {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 1vh; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 2vh;
+    margin-bottom: 2vh;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 20%);
+    color: 003049; 
+}
+
+.high-accuracy {
+    color: green;
+}
+
+/* ---------- SIGN EVALUATION VISUAL EFFECTS ---------- */
+/*.output-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+}*/
+
+.border-box-correct {
+  background-color: green;
+  filter: blur(10px);
+  animation: correct 2s;
+}
+
+.border-box-incorrect {
+  background-color: rgb(201, 89, 89);
+  filter: blur(10px);
+  animation: incorrect 2s;
+}
+
+@keyframes correct {
+  from {
+    background-color: green;
+    filter: blur(50px);
+  }
+
+  to {
+    background-color: rgb(62, 179, 0);
+    filter: blur(10px);
+  }
+}
+
+@keyframes incorrect {
+  from {
+    background-color: rgb(201, 89, 89);
+    filter: blur(50px);
+  }
+
+  to {
+    background-color: rgb(156, 57, 57);
+    filter: blur(10px);
+  }
+}
+
+.animated-border-box {
+  overflow: hidden;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+.animated-border-box:before {
+  content: "";
+  z-index: 0;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  background-position: 0 0;
+  background-image: conic-gradient(purple, pink, lightblue, transparent);
+  animation: rotate 1s linear infinite;
+}
+
+.animated-border-box:after {
+  overflow: hidden;
+}
+
+@keyframes rotate {
+  100% {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
+
+.HomeGlass {
+  display: flex;
+  background: var(--glass);
+  border-radius: 2rem;
+  grid-template-columns: 11rem auto 20rem;
+  overflow: visible;
+  width: 100;
+  height: 95%;
+  width: 95%;
+}
+
+/* ---------- FILL-IN-THE-BLANK QUESTIONS ---------- */
+.fill-in-the-blank-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+}
+
+.visual-cue {
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+
+.fill-in-the-blank-form input::placeholder {
+  color: #91b8ff;
+}
+
+.fill-in-the-blank-form input:focus {
+  outline-width: 0;
+  border: 5px solid #608dff;
+}
+
+.fill-in-the-blank-form input {
+  height: 4rem;
+  width: 15rem;
+  border-radius: 1rem;
+  border: 5px solid #91b0ff;
+  padding: 3px 10px;
+  font-size: large;
+  font-weight: 700;
+  color: #0046d1;
+  background-color: #edf1ff;
+}
+
+/* ---------- WATCH-TO-LEARN QUESTIONS ---------- */
+
+.watch-to-learn-content {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.watch-to-learn-video {
+  width: 50%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+}
+
+.watch-to-learn-camera-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.watch-to-learn-practice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+}
+
+.video-instruction {
+  display: block;
+  width: 250%;
+  object-fit: contain;
+  transform: rotate(270deg) scaleY(-1);
+}
+
+/* ---------- MATCHING QUESTIONS ---------- */
+
+.matching-content {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.matching-visual,
+.matching-text {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: auto;
+}
+
+.matching-visual button {
+  height: 20rem;
+}
+
+.matching-text button {
+  height: 5rem;
+}
+
+
+.visual-card:focus {
+  border: 1rem solid rgb(23, 104, 255) !important;
+  outline: none;
+}
+
+.visual-card:disabled {
+  border: 1rem solid rgb(183, 183, 183);
+  outline: none;
+}
+
+/* Clicked */
+.matching-visual button:focus,
+.matching-text button:focus {
+  /* outline-width: 0;
+  color: white;
+  background-color: #ffcc99;
+  border: 5px solid #ff8000; */
+  font-size: larger;
+  border: 1rem solid rgb(23, 104, 255) !important;
+  outline: none;
+}
+
+/* nothing */
+.matching-visual button,
+.matching-text button {
+  width: 15rem;
+  border-radius: 1rem;
+  background-color: white;
+  border: 3px solid #003049;
+  font-size: large;
+  font-weight: 800;
+  color: #003049;
+  margin: 2rem 2rem;
+  padding: 0;
+}
+
+/* Correct Answer */
+.matching-visual button:disabled,
+.matching-text button:disabled {
+  position: relative;
+  color: #003049;
+  pointer-events: none;
+  background: linear-gradient(45deg, #af6eff, #ff6ec7);
+  transition: border 0.5s ease box-shadow 0.5s ease;
+}
+
+.matching-visual button:disabled {
+  padding: 40px;
+  transition: padding 0.5s ease;
+}
+
+.matching-visual button:hover,
+.matching-text button:hover {
+  border: 1rem solid rgb(110, 182, 255);
+}
+
+
+/* ---------- TEXT ---------- */
+
+.question-text {
+  /*height: 3rem;*/
+  padding: 3rem 0rem 2rem 0rem;
+  font-size: 45px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-content {
+  margin-bottom: 5rem;
+  height: 100%;
+}
+
+/* ---------- HEADER ---------- */
+
+.lesson-header {
+  height: 6rem;
+  background-color: white;
+  padding: 3rem 4rem 3rem 4rem;
+  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+  font-size: x-large;
+  font-weight: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lesson-info {
+  width: 10%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.lesson-title {
+  display: flex;
+  flex-direction: column;
+  font-weight: normal;
+}
+
+.progress-bar {
+  width: 70%;
+  height: 23px;
+  border: none;
+  border-radius: 10px;
+  background-color: darkgrey;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar::-webkit-progress-bar {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+}
+
+.progress-bar::-webkit-progress-value {
+  background-color: #ebab34;
+
+  /* background-color: #8800ff; */
+  border-radius: 10px;
+}
+
+.menu-icon {
+  display: inline;
+}
+
+/* ---------- SIDEBAR ---------- */
+
+/* ---------- MAIN ---------- */
+
+/* ---------- MULTIPLE-CHOICE QUESTION ---------- */
+
+.visual-cue-holder,
+.visual-card {
+  margin: 2rem;
+  height: 20rem;
+  width: 15rem;
+  background-color: white;
+  outline: none;
+  width: 15rem;
+  border-radius: 1rem;
+  background-color: white;
+  border: 3px solid #003049;
+  font-size: large;
+  font-weight: 800;
+  color: #003049;
+  margin: 2rem 2rem;
+  padding: 0;
+}
+
+.visual-card:hover {
+  border: 1rem solid rgb(110, 182, 255);
+}
+
+.visual-card:focus {
+  border: 1rem solid rgb(23, 104, 255) !important;
+  outline: none;
+}
+
+.visual-card:disabled {
+  border: 1rem solid rgb(183, 183, 183);
+  outline: none;
+}
+
+.visual-cue,
+.option-visual {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ---------- BUTTONS ---------- */
+.check-button {
+  border: 5px solid rgb(110, 182, 255);
+  background-color: rgb(23, 104, 255);
+  color: white !important;
+  margin-bottom: 4rem;
+}
+
+.check-button:disabled {
+  border: 5px solid rgb(221, 221, 221) !important;
+  background-color: rgb(183, 183, 183) !important;
+  color: white;
+}
+
+.check-button:hover {
+  background-color: rgb(71, 135, 255);
+  border: 5px solid rgb(110, 182, 255);
+}
+
+.check-button,
+.next-button {
+  width: 20%;
+  min-width: 5rem;
+  height: 80%;
+  margin: 2rem;
+  border-radius: 2rem;
+  font-size: x-large;
+  font-weight: 800;
+}
+
+.skip-button {
+  background-color: rgba(0, 0, 0, 0.233);
+  border: none;
+  /* width: 20rem; */
+  margin: auto;
+  color: rgba(255, 255, 255, 0.587);
+  font-size: x-large;
+  font-weight: 800;
+}
+
+.skip-button div {
+  padding-top: 0.5rem;
+  font-size: 18px;
+}
+
+.skip-button:hover {
+  background-color: #F76267;
+  border: none;
+  width: 20rem;
+  color: rgba(255, 255, 255, 0.587);
+  font-size: x-large;
+  font-weight: 800;
+}
+
+/* ---------- RESULTS ---------- */
+
+.skip-button-container,
+.check-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  position: absolute;
+  z-index: 11;
+  padding: 0 !important;
+  margin: auto !important;
+  width: 50% !important;
+}
+
+.result-correct,
+.result-incorrect {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  z-index: 15;
+}
+
+
+.sign-to-camera-skip-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2rem;
+  bottom: 7rem;
+  position: absolute;
+  z-index: 11;
+}
+
+.result-correct {
+  background-color: #00B800;
+  color: green !important;
+}
+
+.result-incorrect {
+  background-color: rgb(202, 0, 0);
+  color: rgb(189, 0, 0) !important;
+}
+
+.result-incorrect button:hover {
+  border: 5px solid rgb(255, 110, 110);
+}
+
+.result-correct button:hover {
+  border: 5px solid rgb(16, 202, 16);
+}
+
+.result-correct button,
+.result-incorrect button {
+  color: inherit;
+}
+
+.result-text,
+.result-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 70%;
+  background-color: white;
+  font-size: x-large;
+  font-weight: 800;
+  border-radius: 1rem;
+}
+
+.webcam, canvas {
+  width: 100%;
+}

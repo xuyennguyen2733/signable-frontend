@@ -1,0 +1,86 @@
+/* styles.css */
+
+.user-profile-page{
+    position: relative;
+    justify-content: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    font-family: "Poppins";
+}
+
+.user-profile-container {
+    position: relative;
+    height: 100%;
+    padding: 2rem 2rem 2rem 2rem;
+    background: white;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #003049;
+    border-radius: 50px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 15%);
+    justify-content: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-header{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.profile-info{
+    display: grid;
+    flex-direction: row;
+    padding: 0rem 2rem 0rem 2rem;
+    text-align: center;
+}
+
+.home-icon {
+    position: absolute;
+    top: -15%; /* Adjust the top position to raise the icon */
+    left: 1vh; /* Position at the top left */
+    color: hsl(261deg 80% 48%);; /* Set a different color for the icon */
+    cursor: pointer;
+}
+
+/* styles.css */
+.user-information-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 75vh;
+}
+
+.user-statistics {
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    width: 75%;
+    margin-top: 4rem;
+    border-radius: 20px; 
+    background: #eaecff;
+    padding: 1.5rem; 
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 15%);
+  }
+  
+.user-statistics h3 {
+    color: 003049; 
+    margin-bottom: 1rem;
+}
+
+.user-statistics p {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 1vh; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 2vh;
+    margin-bottom: 2vh;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 10%);
+    color: 003049; 
+}

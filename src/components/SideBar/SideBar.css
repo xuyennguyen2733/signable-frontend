@@ -1,0 +1,128 @@
+.side-bar {
+  width: 200px;
+  flex-direction: column;
+  position: relative;
+  padding-top: 2rem;
+  transition: all 0.3s ease;
+  font-family: "Poppins";
+  background-color: white;
+  border-radius: 20px;;
+  padding: 50px 20px 10px 20px;
+}
+
+.bars {
+  display: none;
+}
+
+.logo {
+  margin: 0px !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  font-weight: bold;
+  font-size: 22px;
+  flex-direction: column;
+}
+
+.logo > span {
+  display: flex;
+  color: #00507A;
+  
+}
+
+.logo > span > span {
+  display: flex;
+  color: #003049;
+  display: flex;
+}
+
+.logo > img {
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+}
+
+.menu {
+  max-width: 200px;
+  margin-top: 6rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 2.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 0.7rem;
+  font-size: 14px;
+}
+
+.menuItem:hover {
+  cursor: pointer;
+  background: var(--activeItem);
+}
+
+.menu .menuItem:last-child {
+  position: absolute;
+  bottom: 2.3rem;
+  width: 100%;
+}
+
+.active {
+  background: var(--activeItem);
+  width: 150px;
+}
+
+.largeButton {
+  font-size: 32px;
+}
+
+
+.active::before {
+  content: "";
+  width: 8px;
+  height: 100%;
+  background: black;
+  margin-right: calc(1rem - 8px);
+}
+
+@media screen and (max-width: 768px) {
+  .side-bar {
+    position: fixed;
+    z-index: 9;
+    background: #ffe0e0;
+    width: 55%;
+    padding-right: 1rem;
+    height: 100%;
+  }
+
+  .menuItem > span {
+    display: flex;
+  }
+
+  .menu .menuItem:last-child {
+    position: relative;
+    margin-top: 6rem;
+  }
+
+  .bars {
+    display: flex;
+    position: fixed;
+    top: 2rem;
+    left: 60%;
+    background: #ffe0e0;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 9;
+  }
+
+  .close {
+    left: -60%;
+  }
+}

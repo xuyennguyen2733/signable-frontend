@@ -1,0 +1,134 @@
+.team-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 100vh;
+    overflow-y: scroll;
+    padding: 0rem 5rem 10rem 5rem;
+}
+
+.team-member {
+    display: flex;
+    margin: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px 10px 10px 10px;
+}
+
+.member-info {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.member-info h2 {
+    margin-top: 0;
+}
+
+.member-info p {
+    margin-bottom: 0px;
+}
+
+.member-info a {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: left;
+}
+.left{
+    text-align: left !important;
+}
+
+.member-info a:hover {
+    background-color: #0056b3;
+}
+
+.landingg-logo {
+    display: flex; 
+    align-items: center;
+    height: 1rem;
+    font-weight: bold;
+    font-size: 22px;
+    height: 4%;
+}
+
+.landingg-logo>img {
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+}
+
+
+.team-member-page {
+    position: relative;
+    justify-content: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0rem;
+    font-family: "Poppins";
+  }
+  
+  .team-member-container {
+    position: relative;
+    height: 100%;
+    background: white;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #003049;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 15%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .team-logo{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo-header {
+    display: flex;
+    flex-direction:  row !important;
+    align-items: center; 
+    padding: 10px 20px; 
+}
+
+.linkedin-button {
+    display: inline-block;
+    background-color: #0077B5; 
+    color: #fff !important;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .linkedin-button:hover {
+    background-color: #005f91; 
+  }
+  
+  .linkedin-icon {
+    margin-right: 5px;
+  }

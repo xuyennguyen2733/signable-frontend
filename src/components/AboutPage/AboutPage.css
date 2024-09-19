@@ -1,0 +1,81 @@
+.about-container {
+    position: relative;
+    justify-content: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* padding: 0rem 4rem 4rem 4rem; */
+    font-family: "Poppins";
+    overflow: scroll;
+    height: 90vh;
+
+}
+
+h2{
+    padding-top: 3rem;
+    /* margin-bottom: 1rem !important; */
+}
+
+p{
+    text-align: left;
+}
+
+
+.about-section {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 2rem 15rem 4rem 15rem;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #003049;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 15%);
+    overflow: auto; 
+}
+
+.about-container section {
+    margin-top: 4rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.about-container::-webkit-scrollbar {
+    display: none;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    /* border: none; */
+}
+
+.item p {
+    margin-left: 2rem;
+}
+
+.textRight {
+    padding-left: 5.1rem;
+
+}
+
+.Logo {
+    width: 10rem;
+    height: auto;
+}
+
+
+.left{
+display: flex;
+flex-direction: column !important;
+align-items: center; 
+padding: 10px 20px; 
+}
+
+.LogoAWS {
+    height: 5rem;
+    width: 5rem;
+    padding-right: 0rem;
+}
