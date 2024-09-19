@@ -9,10 +9,10 @@ export default defineConfig(({ mode }) => {
       target: 'esnext'
     },
     define: {
-      "process.env.BUCKET_NAME": JSON.stringify(env.BUCKET_NAME),
-      "process.env.BUCKET_REGION": JSON.stringify(env.BUCKET_REGION),
-      "process.env.ACCESS_KEY": JSON.stringify(env.ACCESS_KEY),
-      "process.env.SECRET_ACCESS_KEY": JSON.stringify(env.SECRET_ACCESS_KEY),
+      "${{env.BUCKET_NAME}}": JSON.stringify(env.BUCKET_NAME),
+      "${{env.BUCKET_REGION}}": JSON.stringify(env.BUCKET_REGION),
+      "${{env.ACCESS_KEY}}": JSON.stringify(env.ACCESS_KEY),
+      "${{env.SECRET_ACCESS_KEY}}": JSON.stringify(env.SECRET_ACCESS_KEY),
       "process.env.DEV": JSON.stringify(env.DEV),
     },
     plugins: [react()],

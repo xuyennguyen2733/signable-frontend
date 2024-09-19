@@ -32,10 +32,10 @@ const questionTypeEnums = {
   WATCH_TO_LEARN: 4,
 };
 
-const BUCKET_NAME = process.env.BUCKET_NAME;
-const BUCKET_REGION = process.env.BUCKET_REGION;
-const ACCESS_KEY = process.env.ACCESS_KEY;
-const SECRET_ACCESS_KEY = process.env.SECRET_ACCESS_KEY;
+const BUCKET_NAME = ${{env.BUCKET_NAME}};
+const BUCKET_REGION = ${{env.BUCKET_REGION}};
+const ACCESS_KEY = ${{env.ACCESS_KEY}};
+const SECRET_ACCESS_KEY = ${{env.SECRET_ACCESS_KEY}};
 
 const s3 = new S3Client({
   credentials: {
