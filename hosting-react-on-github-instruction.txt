@@ -1,6 +1,10 @@
+0. Will need to install gh-pages
+
+RUN npm install gh-pages
+
 1. In package.json, add the member "homepage": "[github-page-url]"
 
-For example: "homepage": "https://xuyennguyen2733.github.io/signable-fronte",
+For example: "homepage": "https://xuyennguyen2733.github.io/signable-frontend",
 
 2. Also in package.json, in "scripts", add these 2 members:
 
@@ -10,3 +14,5 @@ For example: "homepage": "https://xuyennguyen2733.github.io/signable-fronte",
 3. In the terminal,
 
 RUN `npm run deploy`
+
+4. Commit and Push all changes after building
