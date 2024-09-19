@@ -1,0 +1,12 @@
+1. In package.json, add the member "homepage": "[github-page-url]"
+
+For example: "homepage": "https://xuyennguyen2733.github.io/signable-fronte",
+
+2. Also in package.json, in "scripts", add these 2 members:
+
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+
+3. In the terminal,
+
+RUN `npm run deploy`
