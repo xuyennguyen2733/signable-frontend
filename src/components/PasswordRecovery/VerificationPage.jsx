@@ -50,7 +50,7 @@ function VerificationPage() {
               setInputSquares={setInputSquares}
             />
           </div>
-          {error && <p className="error">{error}</p>}{" "}
+          {error && <div className="error">{error}</div>}{" "}
           {/* Render error message */}
           <div
             style={{

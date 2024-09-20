@@ -76,7 +76,7 @@ function LoginPage() {
               <FaLock className="icon" />
             </div>
 
-            {error && <p className="error">{error}</p>}
+            {error && <div className="error">{error}</div>}
 
             <div className="remember-forgot">
               <label>
@@ -89,9 +89,9 @@ function LoginPage() {
               Login
             </button>
             <div className="login-page-register-link">
-              <p>
+              <div>
                 Don't have an account? <a href="/signup">Register</a>
-              </p>
+              </div>
             </div>
           </form>
         </div>
