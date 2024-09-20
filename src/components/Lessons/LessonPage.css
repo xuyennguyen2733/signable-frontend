@@ -408,7 +408,7 @@ body,
 }
 
 .matching-visual button {
-  height: 20rem;
+  height: 15rem;
 }
 
 .matching-text button {
@@ -441,7 +441,7 @@ body,
 /* nothing */
 .matching-visual button,
 .matching-text button {
-  width: 15rem;
+  width: 10rem;
   border-radius: 1rem;
   background-color: white;
   border: 3px solid #003049;
@@ -487,6 +487,7 @@ body,
 
 .question-content {
   margin-bottom: 5rem;
+  width: 100%;
   height: 100%;
 }
 
@@ -619,6 +620,10 @@ body,
   font-weight: 800;
 }
 
+.check-button {
+  width: fit-content;
+}
+
 .skip-button {
   background-color: rgba(0, 0, 0, 0.233);
   border: none;
@@ -720,7 +725,23 @@ body,
   width: 100%;
 }
 
+@media only screen and (max-width:960px) {
+  .matching-text button, .matching-visual button {
+    width: 7rem;
+    margin: 1rem;
+  }
+  
+  .matching-visual button {
+    height: 10rem;
+  }
+  
+  .question-text {
+    font-size: 2rem;
+  }
+}
+
 @media only screen and (max-width:730px) {
+
   .question-text {
     font-size: 2rem;
     line-height: 1.2;
@@ -739,6 +760,38 @@ body,
     padding: 1.5rem;
     margin: 0;
   }
+  
+  /* /* .matching-text button, .matching-visual button {
+    width: 5rem;
+    margin: 1rem;
+  } */
+  
+  .matching-visual button {
+    height: 7rem;
+  }
+  
+  .question-text {
+    font-size: 1.2rem;
+  } 
+}
+
+@media only screen and (max-width: 500px) {
+  .matching-visual, .matching-text {
+    flex-direction: column;
+  }
+  
+  .matching-content {
+    flex-direction: row;
+  }
+  
+  .lesson-info {
+    width: auto;
+  }
+  
+  .matching-visual button, .matching-text button {
+    width: 5rem;
+    height: 5rem;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -746,7 +799,45 @@ body,
     width: 50%;
   }
   
-  .lesson-info {
-    width: auto;
+  
+}
+
+@media only screen and (max-width: 1280px) {
+  .visual-card {
+    width: 12rem;
+    height: 15rem;
   }
+  
+  .question-content {
+    width: 40rem;
+  }
+}
+
+@media only screen and (max-width: 715px) {
+ 
+  .lesson-page,.question-content,main,.HomePage {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .visual-card {
+    width: 7rem;
+    height: 10rem;
+  }
+  
+  .check-button {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .visual-card {
+    margin: 1rem;
+  }
+  
+  .next-button, .result-text,.check-button {
+    font-size: 1rem;
+  }
+  
 }
