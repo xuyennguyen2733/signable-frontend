@@ -13,7 +13,6 @@
 
   .HomePage {
     color: var(--black);
-    height: fit-content; 
     margin: auto;
     height: 100vh;
     display: flex;
@@ -21,6 +20,7 @@
     justify-content: center;
     font-family: 'Inter', sans-serif;
     background: radial-gradient(circle at bottom right, #d0d5ff, #d0d5ff, #d0d5ff);
+    overflow: auto;
   }
 
   .HomeGlass {
