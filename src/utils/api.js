@@ -1,5 +1,5 @@
 const api = (token) => {
-    const baseUrl = process.env.DEV == "True" ? `http://127.0.0.1:8000` : `http://52.250.39.78`;
+    const baseUrl = process.env.DEV == "True" ? `http://127.0.0.1:8000` : `signable-fastapi-d0hkhvazdpchc9cz.westus2-01.azurewebsites.net`;
   
     const headers = {
       "Content-Type": "application/json",

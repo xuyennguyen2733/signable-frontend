@@ -1,0 +1,32 @@
+1. Create a resource group in azure
+2. Create a web app using code and appropriate node version
+3. Install the Azure extension in VS code
+4. In the folder public of your project, create a file called web.config with the following content:
+
+<?xml version="1.0"?>
+<configuration>
+    <system.webServer>
+        <rewrite>
+            <rules>
+                <rule name="React Routes" stopProcessing="true">
+                    <match url=".*" />
+                    <conditions logicalGrouping="MatchAll">
+                        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+                        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+                        <add input="{REQUEST_FILENAME}" pattern="^/(api)" negate="true" />
+                    </conditions>
+                    <action type="Rewrite" url="/" />
+                </rule>
+            </rules>
+        </rewrite>
+    </system.webServer>
+</configuration>
+
+5. In the terminal
+
+RUN npm run build
+
+6. Go to Azure in VS Code, under Resources, expand your plan tab
+7. Expand App Services -> you should see the web app you created
+8. Click Ctrl+Shift+P and type deploy
+9. Select Azure App Service: Deploy to Web App...

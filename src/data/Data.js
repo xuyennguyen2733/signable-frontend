@@ -13,7 +13,7 @@ import {
   BsFillChatSquareTextFill,
 } from "react-icons/bs";
 
-export const api_url = process.env.DEV == "True" ? `http://127.0.0.1:8000` : `http://52.250.39.78`;
+export const api_url = process.env.DEV == "True" ? `http://127.0.0.1:8000` : `signable-fastapi-d0hkhvazdpchc9cz.westus2-01.azurewebsites.net`;
 // Sidebar Data
 export const SidebarData = [
   {
