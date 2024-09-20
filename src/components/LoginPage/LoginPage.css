@@ -19,8 +19,8 @@
 .circle-right {
     position: absolute;
     background: radial-gradient(circle at bottom right, #6474E5, #9AA4Ec, #F8C8c6);
-    width: 3000px;
-    height: 3000px;
+    width: 200rem;
+    height: 200rem;
     border-radius: 50%;
     top: 50%;
     left: 50%;
@@ -30,7 +30,6 @@
 }
 
 .login-page-wrapper {
-    width: 420px;
     background: white;
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(30px);

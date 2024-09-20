@@ -155,7 +155,7 @@
 @media screen and (max-width: 768px) {
   .ExpandedCard {
     top: 8rem;
-    height: 70vh;
+    height: fit-content;
     left: 25px;
     width: 80%;
   }

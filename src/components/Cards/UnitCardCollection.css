@@ -35,9 +35,10 @@ h2 {
 
 .cards {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   gap: 20px;
-  overflow-x: auto;
+  overflow: auto;
   padding-bottom: 1rem;
 
 }

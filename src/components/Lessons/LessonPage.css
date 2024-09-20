@@ -719,3 +719,34 @@ body,
 .webcam, canvas {
   width: 100%;
 }
+
+@media only screen and (max-width:730px) {
+  .question-text {
+    font-size: 2rem;
+    line-height: 1.2;
+    padding: 2rem;
+  }
+  
+  .skip-button {
+    font-size: 1rem;
+  }
+  
+  .lesson-page {
+    height: 100%;
+  }
+  
+  .lesson-header {
+    padding: 1.5rem;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .progress-bar {
+    width: 50%;
+  }
+  
+  .lesson-info {
+    width: auto;
+  }
+}
