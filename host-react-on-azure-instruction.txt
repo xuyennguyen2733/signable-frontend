@@ -1,3 +1,5 @@
+NOTE: You can deploy both your frontend and backend to the same resource group
+
 1. Create a resource group in azure
 2. Create a web app using code and appropriate node version
 3. Install the Azure extension in VS code
@@ -30,3 +32,5 @@ RUN npm run build
 7. Expand App Services -> you should see the web app you created
 8. Click Ctrl+Shift+P and type deploy
 9. Select Azure App Service: Deploy to Web App...
+10. Make sure to select your build folder as the deployed folder (not your source code)
+11. Make sure the built folder is aware of where your index.html is (best to place it in the top level)
